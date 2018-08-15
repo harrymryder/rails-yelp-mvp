@@ -1,0 +1,9 @@
+<ul class="alerts">
+  <% if @restaurant.errors %>
+    <% @restaurant.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= render 'form', restaurant: @restaurant %>
